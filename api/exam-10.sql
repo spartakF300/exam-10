@@ -32,7 +32,7 @@ CREATE TABLE `comments` (
   PRIMARY KEY (`id`),
   KEY `fk_comments_1_idx` (`news_id`),
   CONSTRAINT `fk_comments_1` FOREIGN KEY (`news_id`) REFERENCES `news` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,7 +41,7 @@ CREATE TABLE `comments` (
 
 LOCK TABLES `comments` WRITE;
 /*!40000 ALTER TABLE `comments` DISABLE KEYS */;
-INSERT INTO `comments` VALUES (1,4,'Jack','first'),(2,4,'Valdemar','second'),(7,5,'Bill','First some comment'),(8,5,'Bill','Second some comment');
+INSERT INTO `comments` VALUES (1,4,'Jack','first'),(2,4,'Valdemar','second'),(7,5,'Bill','First some comment'),(8,5,'Bill','Second some comment'),(14,7,'Anonymous','ывпыпы');
 /*!40000 ALTER TABLE `comments` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -81,4 +81,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-02-22 17:43:11
+-- Dump completed on 2020-02-22 18:57:22
