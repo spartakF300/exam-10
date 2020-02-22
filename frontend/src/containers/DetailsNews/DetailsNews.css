@@ -1,0 +1,15 @@
+.comments {
+    padding: 15px;
+    margin-bottom: 20px;
+}
+.comment {
+    margin: 0 0 10px 15px;
+    background: grey;
+    padding: 10px;
+    color: lightyellow;
+}
+.news{
+    padding: 15px;
+    margin-bottom: 20px;
+    background: coral;
+}
