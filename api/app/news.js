@@ -21,7 +21,6 @@ const routerNews = (connection) => {
 
         const items = await connection.query('SELECT * FROM `news`');
         res.send(items);
-        console.log('yes')
     });
 
     router.get('/:id', async (req, res) => {
@@ -56,7 +55,7 @@ const routerNews = (connection) => {
     });
     router.delete('/:id', async (req, res) => {
 
-        const item = await connection.query('DELETE FROM `news` WHERE `id` = ?', req.params.id);
+        await connection.query('DELETE FROM `news` WHERE `id` = ?', req.params.id);
 
 
         res.send({message: 'delete'})

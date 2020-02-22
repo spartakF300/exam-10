@@ -15,7 +15,6 @@ const routerComments = (connection) => {
         res.send(item)
     });
 
-
     router.post('/', async (req, res) => {
         const comments = req.body;
 
@@ -34,9 +33,7 @@ const routerComments = (connection) => {
     router.delete('/:id', async (req, res) => {
        await connection.query('DELETE FROM `comments` WHERE `id` = ?', req.params.id);
 
-
-
-        res.send({message: 'delete'});
+       res.send({message: 'delete'});
 
 
     });
