@@ -25,7 +25,6 @@ export const getComments = (id)=> {
         try {
             dispatch(request());
             const response = await axiosApi.get('/comments/'+id);
-            console.log(response.data);
             dispatch(commentsRequest(response.data))
 
         } catch (e) {
@@ -38,7 +37,6 @@ export const postComments = (data,id)=>{
         try {
             dispatch(request());
             await axiosApi.post('/comments',data);
-            console.log('post');
             dispatch(getComments(id))
         } catch (e) {
             dispatch(requestError(e))
@@ -47,7 +45,6 @@ export const postComments = (data,id)=>{
     }
 };
 export const removeComments = (id,newsId) => {
-    console.log(id,newsId)
     return async dispatch => {
         try{
             await  axiosApi.delete('/comments/'+ id);

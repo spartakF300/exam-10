@@ -25,7 +25,7 @@ class FormComments extends Component {
             <Form onSubmit={this.onSubmitHandler} className='newsForm'>
                 <FormGroup>
                     <Label for="author">author</Label>
-                    <Input required={this.state.author.length < 1} type="text" name="author" value={this.state.author} id="author"  onChange={this.onChangeHandler} />
+                    <Input  type="text" name="author" value={this.state.author} id="author"  onChange={this.onChangeHandler} />
                 </FormGroup>
 
                 <FormGroup>

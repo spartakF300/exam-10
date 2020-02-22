@@ -36,7 +36,6 @@ export const getPost = (id)=> {
         try {
             dispatch(request());
             const response = await axiosApi.get('/news/'+id);
-            // console.log(response.data);
             dispatch(postRequest(response.data))
 
         } catch (e) {
@@ -50,7 +49,6 @@ export const getPost = (id)=> {
             try {
                 dispatch(request());
                 await axiosApi.post('/news',data);
-                console.log('post');
                 dispatch(getNews())
             } catch (e) {
                 dispatch(requestError(e))
