@@ -32,6 +32,7 @@ class DetailsNews extends Component {
                 </div>
                 }
                 <div className="comments">
+                    <h2>Comments({this.props.comments.length})</h2>
                     {this.props.comments && this.props.comments.map((item) => {
                         return (
                             <div className="comment" key={item.id}>
